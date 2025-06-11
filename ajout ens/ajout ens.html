@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" href="ajout.css">
+<title>Ajouter un Enseignant</title>
+<script language="javascript">
+    
+
+function alpha(ch){
+i=0;l=ch.length;
+while((i<l)&&(ch.charAt(i).toUpperCase()>='A')&&(ch.charAt(i).toUpperCase()<='Z'))
+{i++;}
+if(i>=l) {return true}
+else  {return false};
+}
+    
+    function verif(){
+    if(f1.T1.value=="") {alert("le cin est obligatoire");return false;}
+    if  (isNaN(f1.T1.value)) {alert('le numéro de cin est ecrit par des chiffres');return false;}
+	if((f1.T1.value.charAt(0)!='0')&&(f1.T1.value.charAt(0)!='1')) {alert('le numéro de cin commence par 0 ou 1 ');return false;}
+	if (f1.T1.value.length!=8) {alert('la taille de cin est 8');return false;}
+    
+    if(f1.T2.value=="") {alert("nom et prenom obligatoire");return false;}
+    if (!alpha(f1.T2.value)) {alert('ecrivez votre nom par des lettres alphabétiques');return false;}
+    
+    if(f1.T3.value=="") {alert("le prenom et obligatoire");return false;}
+    if (!alpha(f.T3.value)) {alert('ecrivez votre prenom par des lettres alphabétiques');return false;}
+    
+    if(f1.T6.value=="") {alert("mot de passe est obligatoire");return false;}
+    if(f1.T4.value=="") {alert("Email est obligatoire");return false;}
+    if(f1.T5.value=="") {alert("le grade est obligatoire");return false;}
+    }
+    </script>
+
+</head>
+
+<body>
+	<div class="centdiv">
+		<div class="name"><h3>Ajouter un Enseignant</h3></div>
+		<div class="content">
+<form method="POST" action="ajout admin.php" name="f1" onsubmit="return verif()">
+	<h5>Cin</h5>
+	<input type="number" name="T1" size="20" class="input1" placeholder="entrez le num Cin"></p>
+<h5>Nom</h5>
+	<input type="text" name="T2" size="20" class="input1" placeholder="entrez votre nom"></p>
+<h5>Prenom</h5>
+	<input type="text" name="T3" size="20" class="input1" placeholder="entrez votre Prenom"></p>
+<h5>Email</h5>
+	<input type="email" name="T4" size="20" class="input1" placeholder="entrez l'email"></p>
+<h5>Grade</h5>
+	<input type="text" name="T5" size="20" class="input1" placeholder="entrez le grade"></p>
+	
+<h5>mot de passe</h5>
+	<input type="password" name="T6" size="20" class="input1" placeholder="mot de passe"></p>
+	
+	<input type="submit" value="Submit" name="B1" class="btn">
+</form>
+<div class="logo"><img id="img0" src="issatsoo.png"></div>
+</div>
+</div>
+</body>
+
+</html>

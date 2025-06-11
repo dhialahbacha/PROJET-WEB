@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Enseignant</title>
+    <style>
+        .barre {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .action-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .image2 {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="barre">
+        <div class="leftdiv"></div>
+        <div class="centerdiv"><a href="../accueille/acceuil.html">Accueil</a></div>
+        <div class="rightdiv"><a href="../login/login.html"><img class="image2" src="../accueille/yess.png" alt="profil"></a></div>
+    </div>
+
+    <div class="content-container">
+        <h2>Dashboard Enseignant</h2>
+        <div class="dashboard-grid">
+            <div class="action-card">
+                <h3>Gestion des Cours</h3>
+                <p>Ajouter ou modifier les cours</p>
+                <a href="ajouter_cours.php" class="btn">Ajouter un Cours</a>
+            </div>
+
+            <div class="action-card">
+                <h3>Gestion des Examens</h3>
+                <p>Créer et gérer les examens</p>
+                <a href="ajouter_examen.php" class="btn">Ajouter un Examen</a>
+            </div>
+
+            <div class="action-card">
+                <h3>Gestion des Notes</h3>
+                <p>Ajouter et modifier les notes des étudiants</p>
+                <a href="gerer_notes.php" class="btn">Gérer les Notes</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
